@@ -1,0 +1,13 @@
+{
+   "browser_action": {
+      "default_icon": "16.png",
+      "popup": "popup.html"
+   },
+   "description": "Get all opened tabs URLs, and copy them to the clipboard",
+   "icons": {
+      "16": "16.png"
+   },
+   "name": "Get opened tabs URLs",
+   "permissions": [ "tabs" ],
+   "version": "0.1"
+}
