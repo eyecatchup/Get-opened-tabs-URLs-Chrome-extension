@@ -23,16 +23,23 @@ http://www.famfamfam.com/lab/icons/silk/
 
 function list(tabs) {
   var contents = '';
-  for (var i = 0; i !== tabs.length; i++) {
-    var url = tabs[i].url;
-    contents += url + '\n';
+  for (var i = 0; i < tabs.length; i++) {
+    contents += tabs[i].url + '\n';
   }
-  $('textarea').html(contents);
+  document.getElementById('url-list').innerHTML = contents;
 }
 
-$(document).ready(function() {
+function onLoad() {
   chrome.tabs.getAllInWindow(null, list);
-  $('#select_all').click(function(e) {
-    $('textarea').select();
-  })
-});
+  document.getElementById('copy').addEventListener('click', function(e) {
+    var textarea = document.getElementById('url-list');
+    textarea.focus();
+    var result = document.execCommand('copy');
+    if(result) {
+      textarea.select();
+      document.getElementById('result').innerHTML = '<span class="success">copied to clipboard!</span>';
+    } else {
+      document.getElementById('result').innerHTML = '<span class="error">error copying to clipboard</span>';
+    }
+  });
+}

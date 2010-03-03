@@ -3,13 +3,13 @@
 <head>
 <title>Get opened tabs URLs</title>
 <link rel="stylesheet" type="text/css" href="popup.css" />
-<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="get_opened_tabs_urls.js"></script>
 </head>
-<body>
+<body onload="onLoad()">
   <form>
-    <input type="button" id="select_all" value="Select all" />
-    <textarea></textarea>
+    <input type="button" id="copy" value="Copy to clipboard" />
+    <span id="result"></span>
+    <textarea id="url-list"></textarea>
   </form>
 </body>
 </html>

@@ -2,3 +2,15 @@ textarea {
   height: 20ex;
   width: 80em;
 }
+
+#result {
+    font-size: small;
+}
+
+#result .error {
+    color: red;
+}
+
+#result .success {
+    color: green;
+}
