@@ -26,7 +26,7 @@ function list(tabs) {
   for (var i = 0; i < tabs.length; i++) {
     contents += tabs[i].url + '\n';
   }
-  document.getElementById('url-list').innerHTML = contents;
+  document.getElementById('url-list').value = contents;
 }
 
 function onLoad() {
