@@ -3,13 +3,14 @@
 <head>
 <title>Get opened tabs URLs</title>
 <link rel="stylesheet" type="text/css" href="popup.css" />
-<script type="text/javascript" src="get_opened_tabs_urls.js"></script>
 </head>
-<body onload="onLoad()">
+<body>
   <form>
-    <input type="button" id="copy" value="Copy to clipboard" />
+    <input type="button" id="copy" value="Generate and copy to clipboard" />
+	<input type="checkbox" id="pinned" checked="yes">Include pinned tabs</input>&nbsp;
     <span id="result"></span>
     <textarea id="url-list"></textarea>
   </form>
 </body>
+<script type="text/javascript" src="get_opened_tabs_urls.js"></script>
 </html>
